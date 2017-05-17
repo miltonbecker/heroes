@@ -19,6 +19,10 @@ if (process.env.NODE_ENV !== 'production') {
 
 app.use(express.static('public'));
 
+app.get('*', function (req, res) {
+  res.sendFile(path.resolve(__dirname, 'public/index.html'));
+});
+
 const port = process.env.APP_PORT || 8000;
 
 app.listen(port, function (err) {
