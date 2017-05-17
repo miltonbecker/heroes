@@ -1,5 +1,7 @@
 # Heroes App
 
+Live demo: http://miltonbecker.com:8010
+
 ## To start in dev mode
 * npm install
 * npm run dev
