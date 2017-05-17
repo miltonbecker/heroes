@@ -15,7 +15,7 @@ class HeroCard extends Component {
           </div>
           <div className='link-div'>
             <Link className='link' to={`/detail/${this.props.id}`}>
-              detail
+              détail
             </Link>
           </div>
         </div>
