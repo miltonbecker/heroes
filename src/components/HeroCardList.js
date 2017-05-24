@@ -16,15 +16,17 @@ class HeroCardList extends Component {
 
           {((!heroes || !heroes.length) && !fetchingHeroesError) &&
             <p className='loading'>Chargement en cours...</p>}
-          
+
           {fetchingHeroesError &&
             <p className='error'>Désolé, une erreur s'est produite lors de la récupération des héros.</p>}
 
-          <div className='row'>
-            {heroes.map((hero) => (
-              <HeroCard key={hero.id} id={hero.id} name={hero.name} imageUrl={`${hero.thumbnail.path}.${hero.thumbnail.extension}`} />
-            ))}
-          </div>
+          {heroes &&
+            <div className='row'>
+              {heroes.map((hero) => (
+                <HeroCard key={hero.id} id={hero.id} name={hero.name} imageUrl={`${hero.thumbnail.path}.${hero.thumbnail.extension}`} />
+              ))}
+            </div>
+          }
         </div>
       </div>
     );
